@@ -1,0 +1,14 @@
+def moving_average(A, n):
+    SMA=np.zeros(len(A)-n+1)
+    suma_acumulada = (A.cumsum())*(1/n)
+    display("Array:",A)
+    print("\n")
+    display("suma_acumulada:", suma_acumulada)
+    print("\n")
+    SMA[0]=suma_acumulada[2]
+    for i in range(n,len(suma_acumulada)): 
+        SMA[i-n+1]=suma_acumulada[i]-suma_acumulada[i-n]
+    display("Promedio móvil de ventana {}:".format(n),SMA)
+
+a = np.random.randint(30, size=20)
+moving_average(a,4)
