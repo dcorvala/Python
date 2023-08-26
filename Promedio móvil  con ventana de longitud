@@ -1,3 +1,5 @@
+import numpy as np
+
 def moving_average(A, n):
     SMA=np.zeros(len(A)-n+1)
     suma_acumulada = (A.cumsum())*(1/n)
