@@ -4,8 +4,6 @@ Si es par, se divide entre 2; si es impar, se multiplica por 3 y se le suma 1.
 El proceso se repite con el nuevo número generado.
 La conjetura afirma que siempre se llega al número 1, sin importar con qué número se empiece."""
 
-
-
 def f(n):
     sucesion=[n]
     if n<=0 or type(n)!=int:
